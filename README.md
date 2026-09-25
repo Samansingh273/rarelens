@@ -81,7 +81,7 @@ flowchart LR
 - **Realism, measured fairly:** size-matched FID of 168.8, against 118.2 for two sets of real DF images. The images are softer than real photos (they are generated at 128 px), and they still improve the classifier.
 - **Second generator:** the same recipe on vascular lesions reaches FID 156.6 against a real-vs-real reference of 119.8.
 
-## Stress tests (Day 5)
+## Stress tests
 
 | Question a reviewer would ask | Test | Answer |
 |---|---|---|
@@ -145,7 +145,7 @@ A local, offline app (FastAPI and hand-written HTML/CSS/JS, no external requests
 ```bash
 python -m venv .venv && .venv\Scripts\activate      # Windows (Linux/macOS: source .venv/bin/activate)
 pip install -r requirements.txt
-# run notebooks 01 → 05 in order (about 3–4 h of GPU time in total; Days 1–3 were first run on a Colab T4, Days 4–5 on an RTX 4060 laptop)
+# run notebooks 01 → 05 in order (about 3–4 h of GPU time in total; stages 1–3 were first run on a Colab T4, stages 4–5 on an RTX 4060 laptop)
 python prepare_app.py      # once: gathers what the app needs
 python app.py              # opens RareLens at http://127.0.0.1:8000
 ```
