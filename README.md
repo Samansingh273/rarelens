@@ -15,7 +15,9 @@ with an offline web app that shows the model, the generator and the evidence sid
 
 ---
 
-## TL;DR
+## Results
+
+### Main study: dermatofibroma
 
 Dermatofibroma (DF) is only **1.15 %** of HAM10000 (115 of 10,015 images). A ResNet-18 trained on the data as it is catches fewer than half of the DF cases in the test set.
 
@@ -31,7 +33,34 @@ I added **500 extra DF training images** in five different ways, with everything
 
 *Test set: 1,502 real images, 20 of them DF, split by lesion and used once.*
 
-**Findings**
+### Replication: vascular lesions
+
+The whole study was repeated on a second rare disease (VASC, 1.42 % of the data), with a new GAN, a new SMOTE set and 15 new runs.
+
+| Extra VASC training images | VASC F1 (mean ± sd) | Recall | Precision | Avg. precision | False alarms / run |
+|---|---|---|---|---|---|
+| None (baseline) | 0.771 ± 0.029 | 0.698 | 0.868 | 0.823 | 2.3 |
+| Copies of real images | 0.806 ± 0.036 | 0.698 | **0.963** | 0.865 | **0.6** |
+| Classic augmentation | 0.817 ± 0.031 | 0.746 | 0.905 | 0.867 | 1.7 |
+| SMOTE-style blends | 0.814 ± 0.061 | **0.762** | 0.874 | **0.874** | 2.4 |
+| **GAN (this project)** | **0.818 ± 0.044** | 0.714 | 0.957 | 0.836 | **0.6** |
+
+*Test set: the same 1,502 images, 21 of them VASC.*
+
+### Can a lower threshold do the same job?
+
+A decision threshold tuned on validation for every DF model and applied once to test:
+
+| DF model | F1 at default threshold | F1 at tuned threshold | False alarms / run (tuned) |
+|---|---|---|---|
+| Baseline | 0.524 | 0.574 | 12.7 |
+| **GAN** | **0.656** | 0.626 | 9.3 |
+
+Threshold tuning closes only about a third of the gap, and it buys that by flooding the results with false alarms.
+
+<img src="results/figures/day5_threshold_DF.png" alt="DF F1 at the default and the tuned threshold for every method" width="100%">
+
+### Findings
 
 1. **New variation helps; copying does not.** GAN, SMOTE and classic augmentation beat the baseline in every seed. Plain oversampling does not.
 2. **The GAN gives the best overall trade-off.** It has the highest F1, precision and average precision, and the fewest false alarms.
@@ -110,7 +139,7 @@ A local, offline app (FastAPI and hand-written HTML/CSS/JS, no external requests
   - A **reject option** refuses to diagnose non-dermoscopy images. It uses a deep-kNN distance in ImageNet feature space (Sun et al., 2022), calibrated so that 99 % of real validation images pass.
 - **Synthesize.** Generate new lesions from any seed. Each image carries a **live copy check** against the training set, and you can morph between two generated lesions through latent space.
 - **Evidence.** Interactive charts of every result, including the threshold test and which test images each method catches.
-- **Method.** The pipeline, the limitations, and the four candidate app models, with the one chosen on validation.
+- **Method.** The pipeline, its scope, and the four candidate app models, with the one chosen on validation.
 
 ---
 
@@ -152,13 +181,12 @@ python app.py              # opens RareLens at http://127.0.0.1:8000
 
 The dataset (about 2.6 GB) is downloaded by notebook 01 from the public ISIC 2018 archive. Model weights are not in the repository because of their size.
 
-## Limitations
+## Scope and future work
 
-- **Small rare-class test sets** (20 DF, 21 VASC). The three augmentation methods cannot be separated statistically.
-- **One dataset, two rare classes.** On internet images from other cameras, accuracy drops (domain shift). The app flags inputs that are clearly out of scope, but that is no guarantee.
-- **One GAN per disease**, so the seed spread measures classifier variance, not GAN variance.
-- **Selection noise.** The app's model configuration was chosen on validation, and with about 20 rare validation images that choice is noisy (see the Method tab).
-- **Not a medical device.** Nothing here is clinically validated.
+- **Bigger rare-class test sets.** With 20–21 rare test images per disease, GAN, SMOTE and classic augmentation cannot yet be separated statistically. A multi-dataset evaluation (e.g. ISIC 2019/2020) is the natural next step.
+- **Stronger generators.** A diffusion model or StyleGAN2-ADA at higher resolution should give sharper lesions than the 128 px DCGAN.
+- **Domain shift.** The models are trained on one dermoscopy source. The app already rejects clearly out-of-scope photos; domain adaptation would extend it to other cameras.
+- **Research use only.** RareLens is a research demo and is not clinically validated.
 
 ## Credits
 
