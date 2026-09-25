@@ -1,0 +1,8 @@
+label,Baseline (no aug),Oversample only,Classic aug,SMOTE interp.,GAN aug
+MEL,1.3,0.7,1.7,1.3,1.0
+NV,0.3,0.0,2.3,0.3,0.0
+BCC,0.7,0.7,0.7,0.7,0.3
+AKIEC,0.7,0.7,1.7,0.0,0.3
+BKL,1.3,1.0,2.0,1.0,0.7
+VASC,0.0,0.0,0.0,0.0,0.0
+TOTAL false alarms,4.3,3.0999999999999996,8.4,3.3,2.3

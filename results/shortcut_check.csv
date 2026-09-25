@@ -1,0 +1,5 @@
+,n,mean R,mean G,mean B,redness (R−G),sharpness (Laplacian var)
+Real DF (training),71,201.9,150.4,157.9,51.5,93.2
+Real other classes (500 random),500,192.4,139.5,146.8,52.9,70.7
+GAN DF (500),500,202.8,147.0,152.7,55.8,9.9
+SMOTE DF (500),500,203.9,150.4,156.7,53.6,55.5

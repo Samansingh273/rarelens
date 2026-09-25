@@ -1,0 +1,15 @@
+# Research pipeline (notebooks 01-05)
+torch>=2.1
+torchvision>=0.16
+numpy
+pandas
+scikit-learn
+matplotlib
+Pillow
+tqdm
+requests
+pytorch-fid        # FID + the live copy check in the app
+# RareLens app (python prepare_app.py, then python app.py)
+fastapi
+uvicorn
+python-multipart

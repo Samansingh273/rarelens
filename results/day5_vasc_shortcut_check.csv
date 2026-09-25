@@ -1,0 +1,5 @@
+,n,mean R,mean G,mean B,redness (R−G),sharpness (Laplacian var)
+Real VASC (training),99,197.8,148.3,161.3,49.5,39.7
+Real other classes (500 random),500,192.1,138.4,145.0,53.7,66.4
+GAN VASC (500),500,201.3,153.8,166.8,47.4,10.2
+SMOTE VASC (500),500,198.1,147.7,160.6,50.4,26.7

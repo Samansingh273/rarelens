@@ -1,0 +1,4 @@
+image set,n,FID (size-matched),± sd
+Real held-out VASC (reference),43,119.8,0.0
+GAN - filtered (final 500),500,156.6,3.2
+SMOTE blends,500,78.2,4.1

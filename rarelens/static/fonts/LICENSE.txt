@@ -1,0 +1,5 @@
+Instrument Serif, Instrument Sans and JetBrains Mono are bundled so RareLens works offline.
+All three are licensed under the SIL Open Font License, Version 1.1 (https://openfontlicense.org).
+Instrument Serif / Instrument Sans: Copyright 2022 The Instrument Serif / Instrument Sans Project Authors.
+JetBrains Mono: Copyright 2020 The JetBrains Mono Project Authors.
+Files taken from the @fontsource npm packages.

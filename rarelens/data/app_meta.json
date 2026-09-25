@@ -1,0 +1,190 @@
+{
+  "main_model": "DF/gan_aug",
+  "app_model": {
+    "members": [
+      "DF/gan_aug",
+      "VASC/gan_aug"
+    ],
+    "tta": true,
+    "name": "Both GAN models, averaged + 8 views",
+    "knn_k": 10,
+    "knn_threshold": 0.1983339786529541,
+    "low_confidence": 0.5
+  },
+  "models": {
+    "DF/baseline_no_aug": {
+      "rare": "DF",
+      "config": "baseline_no_aug",
+      "label": "Baseline (no aug)",
+      "seed": 42,
+      "path": "results/runs/day1_baseline_noaug_seed42/best.pt"
+    },
+    "DF/oversample_only": {
+      "rare": "DF",
+      "config": "oversample_only",
+      "label": "Oversample only",
+      "seed": 42,
+      "path": "results/runs/day2_oversample_only_seed42/best.pt"
+    },
+    "DF/classic_aug": {
+      "rare": "DF",
+      "config": "classic_aug",
+      "label": "Classic aug",
+      "seed": 42,
+      "path": "results/runs/day2_classic_aug_seed42/best.pt"
+    },
+    "DF/smote_interp": {
+      "rare": "DF",
+      "config": "smote_interp",
+      "label": "SMOTE interp.",
+      "seed": 42,
+      "path": "results/runs/day2_smote_interp_seed42/best.pt"
+    },
+    "DF/gan_aug": {
+      "rare": "DF",
+      "config": "gan_aug",
+      "label": "GAN aug",
+      "seed": 42,
+      "path": "results/runs/day4_gan_aug_seed42/best.pt"
+    },
+    "VASC/baseline_no_aug": {
+      "rare": "VASC",
+      "config": "baseline_no_aug",
+      "label": "Baseline (no aug)",
+      "seed": 42,
+      "path": "results/runs/vasc_day1_baseline_noaug_seed42/best.pt"
+    },
+    "VASC/oversample_only": {
+      "rare": "VASC",
+      "config": "oversample_only",
+      "label": "Oversample only",
+      "seed": 42,
+      "path": "results/runs/vasc_day2_oversample_only_seed42/best.pt"
+    },
+    "VASC/classic_aug": {
+      "rare": "VASC",
+      "config": "classic_aug",
+      "label": "Classic aug",
+      "seed": 42,
+      "path": "results/runs/vasc_day2_classic_aug_seed42/best.pt"
+    },
+    "VASC/smote_interp": {
+      "rare": "VASC",
+      "config": "smote_interp",
+      "label": "SMOTE interp.",
+      "seed": 42,
+      "path": "results/runs/vasc_day2_smote_interp_seed42/best.pt"
+    },
+    "VASC/gan_aug": {
+      "rare": "VASC",
+      "config": "gan_aug",
+      "label": "GAN aug",
+      "seed": 42,
+      "path": "results/runs/vasc_day4_gan_aug_seed42/best.pt"
+    }
+  },
+  "classes": [
+    "MEL",
+    "NV",
+    "BCC",
+    "AKIEC",
+    "BKL",
+    "DF",
+    "VASC"
+  ],
+  "class_names": {
+    "MEL": "Melanoma",
+    "NV": "Melanocytic nevus",
+    "BCC": "Basal cell carcinoma",
+    "AKIEC": "Actinic keratosis / Bowen's",
+    "BKL": "Benign keratosis",
+    "DF": "Dermatofibroma",
+    "VASC": "Vascular lesion"
+  },
+  "examples": [
+    {
+      "id": "ISIC_0029962",
+      "label": "DF",
+      "name": "Dermatofibroma",
+      "note": "GAN-trained model catches this more often than the baseline",
+      "src": "data/examples/ISIC_0029962.jpg"
+    },
+    {
+      "id": "ISIC_0024994",
+      "label": "DF",
+      "name": "Dermatofibroma",
+      "note": "every method catches this one",
+      "src": "data/examples/ISIC_0024994.jpg"
+    },
+    {
+      "id": "ISIC_0030757",
+      "label": "DF",
+      "name": "Dermatofibroma",
+      "note": "no method ever catches this one",
+      "src": "data/examples/ISIC_0030757.jpg"
+    },
+    {
+      "id": "ISIC_0033458",
+      "label": "VASC",
+      "name": "Vascular lesion",
+      "note": "",
+      "src": "data/examples/ISIC_0033458.jpg"
+    },
+    {
+      "id": "ISIC_0031201",
+      "label": "VASC",
+      "name": "Vascular lesion",
+      "note": "",
+      "src": "data/examples/ISIC_0031201.jpg"
+    },
+    {
+      "id": "ISIC_0033075",
+      "label": "NV",
+      "name": "Melanocytic nevus",
+      "note": "",
+      "src": "data/examples/ISIC_0033075.jpg"
+    },
+    {
+      "id": "ISIC_0032569",
+      "label": "MEL",
+      "name": "Melanoma",
+      "note": "",
+      "src": "data/examples/ISIC_0032569.jpg"
+    },
+    {
+      "id": "ISIC_0032556",
+      "label": "BKL",
+      "name": "Benign keratosis",
+      "note": "",
+      "src": "data/examples/ISIC_0032556.jpg"
+    },
+    {
+      "id": "ISIC_0031513",
+      "label": "BCC",
+      "name": "Basal cell carcinoma",
+      "note": "",
+      "src": "data/examples/ISIC_0031513.jpg"
+    },
+    {
+      "id": "ISIC_0026625",
+      "label": "AKIEC",
+      "name": "Actinic keratosis / Bowen's",
+      "note": "",
+      "src": "data/examples/ISIC_0026625.jpg"
+    }
+  ],
+  "rares": [
+    "DF",
+    "VASC"
+  ],
+  "gan": {
+    "DF": {
+      "generator": "models/gan_DF/G_best.pt",
+      "copy_threshold": 0.4755
+    },
+    "VASC": {
+      "generator": "models/gan_VASC/G_best.pt",
+      "copy_threshold": 0.4552
+    }
+  }
+}

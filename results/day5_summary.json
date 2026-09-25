@@ -1,0 +1,331 @@
+{
+  "threshold_DF": {
+    "methods": {
+      "Baseline (no aug)": {
+        "seeds": 3,
+        "DF F1 \u2014 default": "0.524 \u00b1 0.057",
+        "DF F1 \u2014 tuned threshold": "0.574 \u00b1 0.042",
+        "recall \u2014 tuned": "0.667 \u00b1 0.189",
+        "precision \u2014 tuned": "0.539 \u00b1 0.095",
+        "false alarms / run \u2014 tuned": 12.7,
+        "threshold (mean)": 0.19,
+        "DF AP (threshold-free)": "0.615 \u00b1 0.062"
+      },
+      "Oversample only": {
+        "seeds": 3,
+        "DF F1 \u2014 default": "0.531 \u00b1 0.088",
+        "DF F1 \u2014 tuned threshold": "0.588 \u00b1 0.143",
+        "recall \u2014 tuned": "0.483 \u00b1 0.161",
+        "precision \u2014 tuned": "0.780 \u00b1 0.067",
+        "false alarms / run \u2014 tuned": 2.7,
+        "threshold (mean)": 0.33,
+        "DF AP (threshold-free)": "0.692 \u00b1 0.045"
+      },
+      "Classic aug": {
+        "seeds": 3,
+        "DF F1 \u2014 default": "0.620 \u00b1 0.077",
+        "DF F1 \u2014 tuned threshold": "0.642 \u00b1 0.094",
+        "recall \u2014 tuned": "0.600 \u00b1 0.000",
+        "precision \u2014 tuned": "0.712 \u00b1 0.203",
+        "false alarms / run \u2014 tuned": 6.0,
+        "threshold (mean)": 0.54,
+        "DF AP (threshold-free)": "0.681 \u00b1 0.034"
+      },
+      "SMOTE interp.": {
+        "seeds": 3,
+        "DF F1 \u2014 default": "0.637 \u00b1 0.071",
+        "DF F1 \u2014 tuned threshold": "0.650 \u00b1 0.075",
+        "recall \u2014 tuned": "0.617 \u00b1 0.076",
+        "precision \u2014 tuned": "0.693 \u00b1 0.111",
+        "false alarms / run \u2014 tuned": 5.7,
+        "threshold (mean)": 0.3,
+        "DF AP (threshold-free)": "0.689 \u00b1 0.026"
+      },
+      "GAN aug": {
+        "seeds": 3,
+        "DF F1 \u2014 default": "0.656 \u00b1 0.062",
+        "DF F1 \u2014 tuned threshold": "0.626 \u00b1 0.049",
+        "recall \u2014 tuned": "0.667 \u00b1 0.202",
+        "precision \u2014 tuned": "0.675 \u00b1 0.220",
+        "false alarms / run \u2014 tuned": 9.3,
+        "threshold (mean)": 0.25,
+        "DF AP (threshold-free)": "0.734 \u00b1 0.051"
+      }
+    },
+    "paired_tuned_f1": {
+      "Oversample only": {
+        "seed 42": 0.099,
+        "seed 43": 0.094,
+        "seed 44": -0.153,
+        "mean change": 0.013,
+        "better": 2,
+        "same": 0,
+        "worse": 1
+      },
+      "Classic aug": {
+        "seed 42": 0.156,
+        "seed 43": -0.079,
+        "seed 44": 0.124,
+        "mean change": 0.067,
+        "better": 2,
+        "same": 0,
+        "worse": 1
+      },
+      "SMOTE interp.": {
+        "seed 42": 0.156,
+        "seed 43": -0.048,
+        "seed 44": 0.118,
+        "mean change": 0.075,
+        "better": 2,
+        "same": 0,
+        "worse": 1
+      },
+      "GAN aug": {
+        "seed 42": 0.154,
+        "seed 43": -0.012,
+        "seed 44": 0.015,
+        "mean change": 0.052,
+        "better": 2,
+        "same": 0,
+        "worse": 1
+      }
+    }
+  },
+  "threshold_VASC": {
+    "methods": {
+      "Baseline (no aug)": {
+        "seeds": 3,
+        "VASC F1 \u2014 default": "0.771 \u00b1 0.029",
+        "VASC F1 \u2014 tuned threshold": "0.712 \u00b1 0.055",
+        "recall \u2014 tuned": "0.810 \u00b1 0.048",
+        "precision \u2014 tuned": "0.642 \u00b1 0.097",
+        "false alarms / run \u2014 tuned": 10.0,
+        "threshold (mean)": 0.1,
+        "VASC AP (threshold-free)": "0.823 \u00b1 0.017"
+      },
+      "Oversample only": {
+        "seeds": 3,
+        "VASC F1 \u2014 default": "0.806 \u00b1 0.036",
+        "VASC F1 \u2014 tuned threshold": "0.801 \u00b1 0.029",
+        "recall \u2014 tuned": "0.730 \u00b1 0.073",
+        "precision \u2014 tuned": "0.902 \u00b1 0.117",
+        "false alarms / run \u2014 tuned": 2.0,
+        "threshold (mean)": 0.19,
+        "VASC AP (threshold-free)": "0.865 \u00b1 0.018"
+      },
+      "Classic aug": {
+        "seeds": 3,
+        "VASC F1 \u2014 default": "0.817 \u00b1 0.031",
+        "VASC F1 \u2014 tuned threshold": "0.773 \u00b1 0.015",
+        "recall \u2014 tuned": "0.778 \u00b1 0.110",
+        "precision \u2014 tuned": "0.790 \u00b1 0.120",
+        "false alarms / run \u2014 tuned": 5.0,
+        "threshold (mean)": 0.24,
+        "VASC AP (threshold-free)": "0.867 \u00b1 0.033"
+      },
+      "SMOTE interp.": {
+        "seeds": 3,
+        "VASC F1 \u2014 default": "0.814 \u00b1 0.061",
+        "VASC F1 \u2014 tuned threshold": "0.789 \u00b1 0.060",
+        "recall \u2014 tuned": "0.825 \u00b1 0.055",
+        "precision \u2014 tuned": "0.759 \u00b1 0.087",
+        "false alarms / run \u2014 tuned": 5.7,
+        "threshold (mean)": 0.12,
+        "VASC AP (threshold-free)": "0.874 \u00b1 0.023"
+      },
+      "GAN aug": {
+        "seeds": 3,
+        "VASC F1 \u2014 default": "0.818 \u00b1 0.044",
+        "VASC F1 \u2014 tuned threshold": "0.782 \u00b1 0.040",
+        "recall \u2014 tuned": "0.778 \u00b1 0.099",
+        "precision \u2014 tuned": "0.794 \u00b1 0.039",
+        "false alarms / run \u2014 tuned": 4.3,
+        "threshold (mean)": 0.13,
+        "VASC AP (threshold-free)": "0.836 \u00b1 0.030"
+      }
+    },
+    "paired_tuned_f1": {
+      "Oversample only": {
+        "seed 42": 0.095,
+        "seed 43": 0.061,
+        "seed 44": 0.111,
+        "mean change": 0.089,
+        "better": 3,
+        "same": 0,
+        "worse": 0
+      },
+      "Classic aug": {
+        "seed 42": 0.094,
+        "seed 43": -0.003,
+        "seed 44": 0.093,
+        "mean change": 0.061,
+        "better": 2,
+        "same": 0,
+        "worse": 1
+      },
+      "SMOTE interp.": {
+        "seed 42": 0.161,
+        "seed 43": -0.029,
+        "seed 44": 0.099,
+        "mean change": 0.077,
+        "better": 2,
+        "same": 0,
+        "worse": 1
+      },
+      "GAN aug": {
+        "seed 42": 0.041,
+        "seed 43": 0.037,
+        "seed 44": 0.133,
+        "mean change": 0.07,
+        "better": 3,
+        "same": 0,
+        "worse": 0
+      }
+    }
+  },
+  "vasc": {
+    "gan_best_iter": 18000,
+    "gan_best_fid": 136.2,
+    "fid_reference": 119.8,
+    "train_images": 99,
+    "test_images": 21,
+    "summary": {
+      "Baseline (no aug)": {
+        "seeds": 3,
+        "Accuracy": "0.814 \u00b1 0.012",
+        "Macro-F1": "0.673 \u00b1 0.013",
+        "VASC precision": "0.868 \u00b1 0.053",
+        "VASC recall": "0.698 \u00b1 0.073",
+        "VASC F1": "0.771 \u00b1 0.029",
+        "VASC AUROC": "0.963 \u00b1 0.002",
+        "VASC caught (all seeds)": "44 / 63"
+      },
+      "Oversample only": {
+        "seeds": 3,
+        "Accuracy": "0.820 \u00b1 0.020",
+        "Macro-F1": "0.677 \u00b1 0.037",
+        "VASC precision": "0.963 \u00b1 0.064",
+        "VASC recall": "0.698 \u00b1 0.073",
+        "VASC F1": "0.806 \u00b1 0.036",
+        "VASC AUROC": "0.977 \u00b1 0.010",
+        "VASC caught (all seeds)": "44 / 63"
+      },
+      "Classic aug": {
+        "seeds": 3,
+        "Accuracy": "0.826 \u00b1 0.005",
+        "Macro-F1": "0.696 \u00b1 0.005",
+        "VASC precision": "0.905 \u00b1 0.029",
+        "VASC recall": "0.746 \u00b1 0.055",
+        "VASC F1": "0.817 \u00b1 0.031",
+        "VASC AUROC": "0.990 \u00b1 0.002",
+        "VASC caught (all seeds)": "47 / 63"
+      },
+      "SMOTE interp.": {
+        "seeds": 3,
+        "Accuracy": "0.827 \u00b1 0.008",
+        "Macro-F1": "0.696 \u00b1 0.012",
+        "VASC precision": "0.874 \u00b1 0.078",
+        "VASC recall": "0.762 \u00b1 0.048",
+        "VASC F1": "0.814 \u00b1 0.061",
+        "VASC AUROC": "0.977 \u00b1 0.008",
+        "VASC caught (all seeds)": "48 / 63"
+      },
+      "GAN aug": {
+        "seeds": 3,
+        "Accuracy": "0.820 \u00b1 0.003",
+        "Macro-F1": "0.692 \u00b1 0.005",
+        "VASC precision": "0.957 \u00b1 0.037",
+        "VASC recall": "0.714 \u00b1 0.048",
+        "VASC F1": "0.818 \u00b1 0.044",
+        "VASC AUROC": "0.973 \u00b1 0.009",
+        "VASC caught (all seeds)": "45 / 63"
+      }
+    }
+  },
+  "two_diseases": {
+    "DF": {
+      "Baseline (no aug)": {
+        "F1": 0.524,
+        "F1 sd": 0.057,
+        "recall": 0.433,
+        "precision": 0.685,
+        "F1 (tuned threshold)": 0.574,
+        "AP": 0.615
+      },
+      "Oversample only": {
+        "F1": 0.531,
+        "F1 sd": 0.088,
+        "recall": 0.417,
+        "precision": 0.732,
+        "F1 (tuned threshold)": 0.588,
+        "AP": 0.692
+      },
+      "Classic aug": {
+        "F1": 0.62,
+        "F1 sd": 0.077,
+        "recall": 0.633,
+        "precision": 0.618,
+        "F1 (tuned threshold)": 0.642,
+        "AP": 0.681
+      },
+      "SMOTE interp.": {
+        "F1": 0.637,
+        "F1 sd": 0.071,
+        "recall": 0.55,
+        "precision": 0.767,
+        "F1 (tuned threshold)": 0.65,
+        "AP": 0.689
+      },
+      "GAN aug": {
+        "F1": 0.656,
+        "F1 sd": 0.062,
+        "recall": 0.55,
+        "precision": 0.833,
+        "F1 (tuned threshold)": 0.626,
+        "AP": 0.734
+      }
+    },
+    "VASC": {
+      "Baseline (no aug)": {
+        "F1": 0.771,
+        "F1 sd": 0.029,
+        "recall": 0.698,
+        "precision": 0.868,
+        "F1 (tuned threshold)": 0.712,
+        "AP": 0.823
+      },
+      "Oversample only": {
+        "F1": 0.806,
+        "F1 sd": 0.036,
+        "recall": 0.698,
+        "precision": 0.963,
+        "F1 (tuned threshold)": 0.801,
+        "AP": 0.865
+      },
+      "Classic aug": {
+        "F1": 0.817,
+        "F1 sd": 0.031,
+        "recall": 0.746,
+        "precision": 0.905,
+        "F1 (tuned threshold)": 0.773,
+        "AP": 0.867
+      },
+      "SMOTE interp.": {
+        "F1": 0.814,
+        "F1 sd": 0.061,
+        "recall": 0.762,
+        "precision": 0.874,
+        "F1 (tuned threshold)": 0.789,
+        "AP": 0.874
+      },
+      "GAN aug": {
+        "F1": 0.818,
+        "F1 sd": 0.044,
+        "recall": 0.714,
+        "precision": 0.957,
+        "F1 (tuned threshold)": 0.782,
+        "AP": 0.836
+      }
+    }
+  }
+}

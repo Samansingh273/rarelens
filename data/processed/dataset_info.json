@@ -1,0 +1,73 @@
+{
+  "dataset": "HAM10000 (ISIC 2018 Task 3 training set)",
+  "n_images": 10015,
+  "n_lesions": 7470,
+  "rare_class": "DF",
+  "rare_class_name": "Dermatofibroma",
+  "rare_selection_rule": "share < 2% of images; among those, fewest distinct lesions (ties: fewest images)",
+  "class_distribution": [
+    {
+      "class": "NV",
+      "name": "Melanocytic nevus",
+      "images": 6705,
+      "lesions": 5403,
+      "pct_images": 66.94957563654518,
+      "imgs_per_lesion": 1.240977234869517,
+      "under_2pct": false
+    },
+    {
+      "class": "MEL",
+      "name": "Melanoma",
+      "images": 1113,
+      "lesions": 614,
+      "pct_images": 11.11333000499251,
+      "imgs_per_lesion": 1.8127035830618892,
+      "under_2pct": false
+    },
+    {
+      "class": "BKL",
+      "name": "Benign keratosis",
+      "images": 1099,
+      "lesions": 727,
+      "pct_images": 10.973539690464303,
+      "imgs_per_lesion": 1.5116918844566714,
+      "under_2pct": false
+    },
+    {
+      "class": "BCC",
+      "name": "Basal cell carcinoma",
+      "images": 514,
+      "lesions": 327,
+      "pct_images": 5.132301547678482,
+      "imgs_per_lesion": 1.5718654434250765,
+      "under_2pct": false
+    },
+    {
+      "class": "AKIEC",
+      "name": "Actinic keratosis / Bowen's",
+      "images": 327,
+      "lesions": 228,
+      "pct_images": 3.2651023464802797,
+      "imgs_per_lesion": 1.4342105263157894,
+      "under_2pct": false
+    },
+    {
+      "class": "VASC",
+      "name": "Vascular lesion",
+      "images": 142,
+      "lesions": 98,
+      "pct_images": 1.417873190214678,
+      "imgs_per_lesion": 1.4489795918367347,
+      "under_2pct": true
+    },
+    {
+      "class": "DF",
+      "name": "Dermatofibroma",
+      "images": 115,
+      "lesions": 73,
+      "pct_images": 1.1482775836245631,
+      "imgs_per_lesion": 1.5753424657534247,
+      "under_2pct": true
+    }
+  ]
+}

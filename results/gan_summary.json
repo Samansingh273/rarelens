@@ -1,0 +1,18 @@
+{
+  "rare_class": "DF",
+  "gan_training_images": 71,
+  "image_size": 128,
+  "best_iteration": 18000,
+  "best_fid_all_500": 153.5,
+  "fid_reference_real_vs_real": 118.17,
+  "candidates": 2000,
+  "filter_counts": {
+    "kept": 974,
+    "selected": 500,
+    "outlier": 492,
+    "copy": 34
+  },
+  "manual_rejects": 0,
+  "median_nn_distance_generated": 0.6245,
+  "median_nn_distance_real_real": 0.5708
+}

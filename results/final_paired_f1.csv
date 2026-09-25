@@ -1,0 +1,5 @@
+method,seed 42,seed 43,seed 44,mean change,better,same,worse
+Oversample only,0.016,0.142,-0.137,0.007,2,0,1
+Classic aug,0.109,0.067,0.115,0.097,3,0,0
+SMOTE interp.,0.062,0.164,0.115,0.114,3,0,0
+GAN aug,0.147,0.117,0.134,0.133,3,0,0

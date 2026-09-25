@@ -1,0 +1,22 @@
+{
+  "img_size": 128,
+  "z_dim": 128,
+  "g_width": 64,
+  "d_width": 32,
+  "iters": 20000,
+  "batch_size": 32,
+  "lr_g": 0.0001,
+  "lr_d": 0.0004,
+  "betas": [
+    0.0,
+    0.99
+  ],
+  "d_steps": 2,
+  "ema_beta": 0.999,
+  "diffaug_policy": "color,translation,cutout",
+  "dihedral_real": true,
+  "log_every": 500,
+  "eval_every": 2000,
+  "fid_samples": 500,
+  "seed": 42
+}
